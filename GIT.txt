@@ -1,0 +1,211 @@
+
+maapaa@Pavvi MINGW64 ~
+$ ls
+ AppData/             Dropbox/           NTUSER.DAT                                                                                     PrintHood@        'Start Menu'@   ntuser.dat.LOG1
+'Application Data'@   Favorites/         NTUSER.DAT{abca017f-012d-11ed-8b39-009337f95fe6}.TM.blf                                        PycharmProjects/   Templates@     ntuser.dat.LOG2
+ Contacts/            Links/             NTUSER.DAT{abca017f-012d-11ed-8b39-009337f95fe6}.TMContainer00000000000000000001.regtrans-ms   Recent@            Videos/        ntuser.ini
+ Cookies@            'Local Settings'@   NTUSER.DAT{abca017f-012d-11ed-8b39-009337f95fe6}.TMContainer00000000000000000002.regtrans-ms  'Saved Games'/      anaconda3/
+ Documents/           Music/             NetHood@                                                                                       Searches/          ansel/
+ Downloads/          'My Documents'@     OneDrive/                                                                                      SendTo@            eclipse/
+
+maapaa@Pavvi MINGW64 ~
+$ cd onedrive
+
+maapaa@Pavvi MINGW64 ~/onedrive
+$ cd desktop
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop
+$ ls
+'ARK Survival Evolved.url'  'Anaconda Navigator (anaconda3).lnk'*   Eclipse.lnk*  'Microsoft Edge.lnk'*   Pycharm.lnk*   SP/  'This PC.lnk'*   desktop.ini   firstproject/
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop
+$ cd sp
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git remote add "https://github.com/Akshaygb/NewCoding"
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git remote add "Akshaygb" "https://github.com/Akshaygb/NewCoding"
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git push Akshaygb
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream Akshaygb master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git push --set-upstream Akshaygb master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 216 bytes | 216.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Akshaygb/NewCoding/pull/new/master
+remote:
+To https://github.com/Akshaygb/NewCoding
+ * [new branch]      master -> master
+branch 'master' set up to track 'Akshaygb/master'.
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$  https://github.com/Akshaygb/NewCoding/pull/new/master
+bash: https://github.com/Akshaygb/NewCoding/pull/new/master: No such file or directory
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git push Akshaygb
+Everything up-to-date
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ ls
+f1  f2  f2.txt  f3
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git remote add "Akshaygb" "https://github.com/Akshaygb/NewCoding"
+error: remote Akshaygb already exists.
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git push Akshaygb
+Everything up-to-date
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git  checkout
+M       f1
+Your branch is up to date with 'Akshaygb/master'.
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git rm --cached f2.txt
+fatal: pathspec 'f2.txt' did not match any files
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ ls
+f1  f2  f2.txt  f3
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git status
+On branch master
+Your branch is up to date with 'Akshaygb/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   f1
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        f2.txt
+        f3
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git add .
+warning: in the working copy of 'f1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'f2.txt', LF will be replaced by CRLF the next time Git touches it
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git add f2.txt
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git add f3
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git status
+On branch master
+Your branch is up to date with 'Akshaygb/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   f1
+        new file:   f2.txt
+        new file:   f3
+
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git commit -m "my second message"
+[master ac36725] my second message
+ 3 files changed, 4 insertions(+)
+ create mode 100644 f2.txt
+ create mode 100644 f3
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git show ac36725
+commit ac36725799805422c927a4812681bae16f697512 (HEAD -> master)
+Author: AkshayGB <goturakshay@gmail.com>
+Date:   Mon Oct 31 21:50:51 2022 +0530
+
+    my second message
+
+diff --git a/f1 b/f1
+index e69de29..ce55385 100644
+--- a/f1
++++ b/f1
+@@ -0,0 +1 @@
++this is first file
+diff --git a/f2.txt b/f2.txt
+new file mode 100644
+index 0000000..accc0f2
+--- /dev/null
++++ b/f2.txt
+@@ -0,0 +1,3 @@
++python code
++print("helo world")
++
+diff --git a/f3 b/f3
+new file mode 100644
+index 0000000..e69de29
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git status
+On branch master
+Your branch is ahead of 'Akshaygb/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ git push Akshaygb
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 359 bytes | 359.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Akshaygb/NewCoding
+   c6944bf..ac36725  master -> master
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ ^C
+
+maapaa@Pavvi MINGW64 ~/onedrive/desktop/sp (master)
+$ ^C
+
